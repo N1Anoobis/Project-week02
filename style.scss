@@ -130,16 +130,12 @@ section {
 header {
     background-color: $color-one;
     color: $font-color-white;
-    min-width: auto;
-    min-height: auto;
     height: 500px;
 
     .splash-inner {
-        margin: auto;
-        max-width: 70%;
-        width: 600px;
-        padding-top: 150px;
-        max-height: 500px;
+        margin: 0 auto;
+        width: 60vw;
+        padding-top: 50px;
 
         h1 {
             margin: 0;
@@ -147,11 +143,6 @@ header {
             word-spacing: 24px;
             font-weight: 700;
             line-height: 1.2;
-
-            strong {
-                width: 100%;
-                word-spacing: 1px;
-            }
 
             span {
                 font-family: $font-titles;
@@ -182,43 +173,44 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-.btn-service{
-    margin: 0 auto;
-    order: 1;
 
-    .btn-four {
-        
-        border-color: $color-one;
-        color: $color-one;
-        background-image: linear-gradient(90deg, $color-one 50%, #ffffff 50%);
-        
-        &:hover {
-            color: $font-color-white;
+    .btn-service {
+        margin: 0 auto;
+        order: 1;
+
+        .btn-four {
+
+            border-color: $color-one;
+            color: $color-one;
+            background-image: linear-gradient(90deg, $color-one 50%, #ffffff 50%);
+
+            &:hover {
+                color: $font-color-white;
+            }
+        }
+
+        .btn-three {
+
+            border-color: $color-three;
+            color: $color-three;
+            background-image: linear-gradient(90deg, $color-three 50%, #ffffff 50%);
+
+            &:hover {
+                color: $font-color-white;
+            }
+        }
+
+        .btn-two {
+
+            border-color: $color-two;
+            color: $color-two;
+            background-image: linear-gradient(90deg, $color-two 50%, #ffffff 50%);
+
+            &:hover {
+                color: $font-color-white;
+            }
         }
     }
-
-    .btn-three {
-       
-        border-color: $color-three;
-        color: $color-three;
-        background-image: linear-gradient(90deg, $color-three 50%, #ffffff 50%);
-     
-        &:hover {
-            color: $font-color-white;
-        }
-    }
-
-    .btn-two {
-       
-        border-color: $color-two;
-        color: $color-two;
-        background-image: linear-gradient(90deg, $color-two 50%, #ffffff 50%);
-        
-        &:hover {
-            color: $font-color-white;
-        }
-    }
-}
 
     .item {
         flex: 0 0 33.333%;
@@ -227,8 +219,8 @@ header {
         height: auto;
         overflow: hidden;
         text-overflow: ellipsis;
-        
-        
+
+
 
         h3 {
             font-family: $font-titles;
@@ -264,7 +256,7 @@ header {
             }
         }
 
-        
+
     }
 }
 
@@ -469,10 +461,11 @@ footer {
 /* Media */
 @media (min-width: 768px) and (max-width: 991px) {
     header {
-        height: 100vh;
+        height: auto;
 
         .splash-inner {
-            align-items: center;
+            text-align: center;
+
 
             h1,
             h2 {
@@ -481,14 +474,13 @@ footer {
             }
         }
 
-        a.btn {
-            margin: 0;
+        a.btn-one {
+            margin: 0 0 30px 0;
         }
     }
 
     .form {
         position: relative;
-
 
         button {
             position: absolute;
@@ -496,9 +488,9 @@ footer {
         }
     }
 
-    section.services button {
-        margin-top: 80px;
-    }
+    // section.services button {
+    //     margin-top: 80px;
+    // }
 
     .work {
         padding-top: 0;
@@ -537,20 +529,16 @@ footer {
 }
 
 @media (max-width: 767px) {
-    .navigation {
-        max-width: 100vw;
-    }
 
     header {
-        height: 100vh;
+        height: auto;
 
         .splash-inner {
-            align-items: center;
+            text-align: center;
 
             h1.page-title {
-                padding-top: 20vh;
+                padding-top: 10px;
                 font-size: 42px;
-                text-align: center;
             }
 
             h2 {
@@ -558,8 +546,8 @@ footer {
                 margin-left: 0;
             }
 
-            a.btn {
-                margin: 0;
+            a.btn-one {
+                margin: 0 0 30px 0;
             }
         }
     }
@@ -610,46 +598,26 @@ footer {
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
-       
 
         h1 {
             flex-basis: 100%;
-            padding-right: 15vw;
         }
 
         .wrapper {
-            .btn-service{
+            .btn-service {
                 margin: 0 auto;
-                // order: 1;
-            }            
+            }
+
             .item {
                 text-align: justify;
                 padding-bottom: 40px;
-                // flex-basis: 100%;
-                // max-width: 100%;
                 width: 70vw;
                 margin-top: 100px;
                 height: auto;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 order: 1;
-
-                // p {
-                //     max-height: 30%;
-                // }
-
-
-
             }
-
-            // button {
-            //     display: block;
-            //     left: 50%;
-            //     transform: translateX(-50%);
-            //     margin: 0;
-
-
-            // }
         }
     }
 

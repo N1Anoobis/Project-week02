@@ -121,17 +121,13 @@ section {
 header {
   background-color: #34ace0;
   color: #ffffff;
-  min-width: auto;
-  min-height: auto;
   height: 500px;
 }
 
 header .splash-inner {
-  margin: auto;
-  max-width: 70%;
-  width: 600px;
-  padding-top: 150px;
-  max-height: 500px;
+  margin: 0 auto;
+  width: 60vw;
+  padding-top: 50px;
 }
 
 header .splash-inner h1 {
@@ -140,11 +136,6 @@ header .splash-inner h1 {
   word-spacing: 24px;
   font-weight: 700;
   line-height: 1.2;
-}
-
-header .splash-inner h1 strong {
-  width: 100%;
-  word-spacing: 1px;
 }
 
 header .splash-inner h1 span {
@@ -506,20 +497,18 @@ footer .social-links li a i {
 /* Media */
 @media (min-width: 768px) and (max-width: 991px) {
   header {
-    height: 100vh;
+    height: auto;
   }
   header .splash-inner {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    text-align: center;
   }
   header .splash-inner h1,
   header .splash-inner h2 {
     text-align: center;
     margin-left: 0;
   }
-  header a.btn {
-    margin: 0;
+  header a.btn-one {
+    margin: 0 0 30px 0;
   }
   .form {
     position: relative;
@@ -527,9 +516,6 @@ footer .social-links li a i {
   .form button {
     position: absolute;
     left: 50%;
-  }
-  section.services button {
-    margin-top: 80px;
   }
   .work {
     padding-top: 0;
@@ -574,28 +560,22 @@ footer .social-links li a i {
 }
 
 @media (max-width: 767px) {
-  .navigation {
-    max-width: 100vw;
-  }
   header {
-    height: 100vh;
+    height: auto;
   }
   header .splash-inner {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    text-align: center;
   }
   header .splash-inner h1.page-title {
-    padding-top: 20vh;
+    padding-top: 10px;
     font-size: 42px;
-    text-align: center;
   }
   header .splash-inner h2 {
     text-align: center;
     margin-left: 0;
   }
-  header .splash-inner a.btn {
-    margin: 0;
+  header .splash-inner a.btn-one {
+    margin: 0 0 30px 0;
   }
   * h1 {
     text-align: center;
@@ -656,7 +636,6 @@ footer .social-links li a i {
   .services div.container h1 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    padding-right: 15vw;
   }
   .services div.container .wrapper .btn-service {
     margin: 0 auto;
