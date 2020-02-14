@@ -217,7 +217,6 @@ header .splash-inner a.btn-one {
       -ms-flex: 0 0 33.333%;
           flex: 0 0 33.333%;
   position: relative;
-  padding-bottom: 20px;
   height: auto;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -235,7 +234,6 @@ header .splash-inner a.btn-one {
 }
 
 .wrapper .item h4 {
-  top: 5px;
   font-size: 24px;
   margin: 0 0 12px 0;
 }
@@ -243,19 +241,17 @@ header .splash-inner a.btn-one {
 .wrapper .item p {
   color: #2c2c54;
   font-family: "Inconsolata", monospace;
-  top: 65px;
   padding-right: 4vw;
 }
 
 .wrapper .item p:first-of-type {
   font-weight: bold;
-  top: 40px;
 }
 
 /* Work */
 h1 {
   font-size: 48px;
-  margin: 0 0 72px 0;
+  margin: 0;
   padding-top: 0;
 }
 
