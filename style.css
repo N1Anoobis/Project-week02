@@ -174,6 +174,7 @@ header .splash-inner h2 {
           flex: 0 0 33.333%;
   position: relative;
   padding-bottom: 140px;
+  height: 60vh;
 }
 
 .wrapper .item h3 {
@@ -210,11 +211,15 @@ header .splash-inner h2 {
 
 .wrapper .item .btn-four {
   position: absolute;
-  top: 200px;
   border-color: #34ace0;
   color: #34ace0;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #34ace0), color-stop(50%, #ffffff));
   background-image: linear-gradient(90deg, #34ace0 50%, #ffffff 50%);
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 2px;
 }
 
 .wrapper .item .btn-four:hover {
@@ -223,11 +228,15 @@ header .splash-inner h2 {
 
 .wrapper .item .btn-three {
   position: absolute;
-  top: 200px;
   border-color: #ff5252;
   color: #ff5252;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #ff5252), color-stop(50%, #ffffff));
   background-image: linear-gradient(90deg, #ff5252 50%, #ffffff 50%);
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 2px;
 }
 
 .wrapper .item .btn-three:hover {
@@ -236,11 +245,15 @@ header .splash-inner h2 {
 
 .wrapper .item .btn-two {
   position: absolute;
-  top: 200px;
   border-color: #33d9b2;
   color: #33d9b2;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #33d9b2), color-stop(50%, #ffffff));
   background-image: linear-gradient(90deg, #33d9b2 50%, #ffffff 50%);
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 2px;
 }
 
 .wrapper .item .btn-two:hover {
@@ -490,12 +503,26 @@ footer .social-links li a i {
 }
 
 /* Media */
-@media (min-width: 701px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   header {
     height: 100vh;
   }
-  header .splash-inner h1 {
+  header .splash-inner h1,
+  header .splash-inner h2 {
     text-align: center;
+  }
+  header a.btn {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .form {
+    position: relative;
+  }
+  .form button {
+    position: absolute;
+    left: 50%;
   }
   section.services button {
     margin-top: 80px;
@@ -533,6 +560,7 @@ footer .social-links li a i {
   }
   .box-wrap .box button {
     margin: 0;
+    text-align: center;
   }
   .box-wrap .img {
     -webkit-box-ordinal-group: 2;
@@ -541,13 +569,22 @@ footer .social-links li a i {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   header {
     height: 100vh;
   }
   header .splash-inner h1 {
     font-size: 42px;
     text-align: center;
+  }
+  header .splash-inner h2 {
+    text-align: center;
+  }
+  header .splash-inner a.btn {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   * h1 {
     text-align: center;
@@ -594,12 +631,55 @@ footer .social-links li a i {
         -ms-flex-order: 1;
             order: 1;
   }
-  .wrapper .item {
-    text-align: center;
-    padding-bottom: 300px;
+  .services div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 100;
+        flex-basis: 100;
+    padding: 0 0 0 100px;
+  }
+  .services div.container h1 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding-right: 15vw;
+  }
+  .services div.container .wrapper .item {
+    text-align: justify;
+    padding-bottom: 400px;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    max-width: 80%;
+    margin-top: 100px;
+  }
+  .services div.container .wrapper button {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: 0;
+  }
+  .form-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .form {
-    margin-left: 10vw;
+    position: relative;
+    padding-left: 15vw;
+  }
+  .form button {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .personal-data {
     margin-top: 50px;
