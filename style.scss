@@ -127,15 +127,15 @@ section {
 }
 
 /* Header */
-header {
+.splash {
     background-color: $color-one;
     color: $font-color-white;
     height: 500px;
+    display: flex;
 
     .splash-inner {
-        margin: 0 auto;
-        width: 60vw;
-        padding-top: 50px;
+        margin:  auto;
+        max-width: 70%;
 
         h1 {
             margin: 0;
@@ -161,6 +161,7 @@ header {
     }
 }
 
+
 /* Services */
 .services h1 {
     font-size: 48px;
@@ -171,7 +172,6 @@ header {
 .wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-content: center;
 
     .btn-service {
@@ -179,7 +179,6 @@ header {
         order: 1;
 
         .btn-four {
-
             border-color: $color-one;
             color: $color-one;
             background-image: linear-gradient(90deg, $color-one 50%, #ffffff 50%);
@@ -190,7 +189,6 @@ header {
         }
 
         .btn-three {
-
             border-color: $color-three;
             color: $color-three;
             background-image: linear-gradient(90deg, $color-three 50%, #ffffff 50%);
@@ -201,7 +199,6 @@ header {
         }
 
         .btn-two {
-
             border-color: $color-two;
             color: $color-two;
             background-image: linear-gradient(90deg, $color-two 50%, #ffffff 50%);
@@ -218,8 +215,6 @@ header {
         height: auto;
         overflow: hidden;
         text-overflow: ellipsis;
-
-
 
         h3 {
             font-family: $font-titles;
@@ -268,7 +263,6 @@ h1 {
         max-height: 440px;
         position: relative;
         padding-bottom: 96px;
-
 
         .img {
             width: 100%;
@@ -449,12 +443,18 @@ footer {
 
 /* Media */
 @media (min-width: 768px) and (max-width: 991px) {
+.navigation {
+    display: flex;
+    ul{
+        margin: auto;
+    }
+}
+
     header {
         height: auto;
 
         .splash-inner {
             text-align: center;
-
 
             h1,
             h2 {
@@ -476,10 +476,6 @@ footer {
             left: 50%;
         }
     }
-
-    // section.services button {
-    //     margin-top: 80px;
-    // }
 
     .work {
         padding-top: 0;
@@ -518,6 +514,12 @@ footer {
 }
 
 @media (max-width: 767px) {
+    .navigation {
+        display: flex;
+        ul{
+            margin: auto;
+        }
+    } 
 
     header {
         height: auto;
@@ -556,7 +558,7 @@ footer {
 
     .box-wrap {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         max-width: 100%;
         height: 150px;
         margin: 15px auto;
@@ -630,5 +632,56 @@ footer {
     .personal-data {
         margin-top: 50px;
         text-align: center;
+    }
+}
+
+@media (max-width: 411px) {
+    .navigation {
+        display: flex;
+       
+        ul{
+            margin: auto;
+            li{
+                margin: 0;
+            }
+        }
+    }
+
+    .work {
+        padding-top: 0;
+    }
+
+    .box-wrap {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: 150px;
+        margin: 15px auto;
+
+        .box {
+            position: relative;
+            order: 2;
+            padding-top: 0;
+            margin: 0 auto;
+            width: 100%;
+
+            p {
+                padding: 0;
+            }
+
+            button {
+                margin: 0;
+            }
+        }
+
+        .img {
+            order: 1;
+        }
+    }
+
+    .form-wrap {
+        .form {
+            padding: 0 10px;
+        }
     }
 }
