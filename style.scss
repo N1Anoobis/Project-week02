@@ -212,7 +212,7 @@ section {
         height: auto;
         overflow: hidden;
         text-overflow: ellipsis;
-
+        
         h3 {
             font-family: $font-titles;
             font-size: 144px;
@@ -251,7 +251,7 @@ h1 {
 .work .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    grid-template-rows: 1fr 1fr;
     .box-wrap {
         min-height: 300px;
         //padding jeszcze mi zostal
@@ -263,12 +263,12 @@ h1 {
             "img box"1fr;
 
         .img {
-            width: 100%;
+            // width: 100%;
             height: 100%;
             max-width: 250px;
             position: relative;
             grid-area: img;
-
+            
             img {
                 object-fit: cover;
                 width: 100%;
@@ -489,7 +489,7 @@ footer {
                 "img"auto "box"auto;
 
             .box {
-                width: 100%;
+                // width: 100%;
                 grid-area: box;
                 padding: 0;
                 display: flex;
@@ -559,15 +559,16 @@ footer {
         padding-top: 0;
 
         .wrapper {
-            grid-template-columns: auto;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
             .box-wrap {
-                height: 150px;
+                // height: 150px;
                 margin: 15px auto;
         
                 .box {
                     padding-top: 0;
                     margin: 0 auto;
-                    width: 100%;
+                    // width: 100%;
         
                     h3 {
                        margin-top: 0;
@@ -658,18 +659,19 @@ footer {
     .work {
         padding-top: 0;
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
     }
 
     .work .wrapper {
         .box-wrap {
             grid-template:
                 "img"auto "box"auto;
-            margin: 85px auto;
+            margin: 15px auto;
+            padding-bottom: 0;
 
             .box {
                 grid-area: box;
-                padding: 0;
+                padding: 30px 0 0 0;
                 display: flex;
                 flex-direction: column;
 
