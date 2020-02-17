@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-size: 16px;
@@ -211,8 +215,6 @@ section {
 .wrapper-ser .item {
   position: relative;
   height: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .wrapper-ser .item h3 {
@@ -235,6 +237,14 @@ section {
   color: #2c2c54;
   font-family: "Inconsolata", monospace;
   padding-right: 4vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px;
+  max-height: 160px;
+  /* The number of lines to be displayed */
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
 }
 
 .wrapper-ser .item p:first-of-type {
@@ -474,6 +484,21 @@ footer .social-links li a i {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+/* Go top */
+.go-top {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: #555;
+  opacity: .4;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 10%;
 }
 
 /* Media */

@@ -20,6 +20,10 @@ $transition: all .5s;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-size: 16px;
@@ -207,12 +211,14 @@ section {
         }
     }
 
+    // $font-size: 16px;
+    // $line-height: 1.4;
+    // $lines-to-show: 4;
     .item {
         position: relative;
         height: auto;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        
+
+
         h3 {
             font-family: $font-titles;
             font-size: 144px;
@@ -234,6 +240,16 @@ section {
             font-family: $font-text;
             padding-right: 4vw;
 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-height: 16px;
+            max-height: 160px;
+
+            /* The number of lines to be displayed */
+            -webkit-line-clamp: 10;
+            -webkit-box-orient: vertical;
+
             &:first-of-type {
                 font-weight: bold;
             }
@@ -252,12 +268,13 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+
     .box-wrap {
         min-height: 300px;
         //padding jeszcze mi zostal
         padding-bottom: 96px;
-        
-        
+
+
         display: grid;
         grid-template:
             "img box"1fr;
@@ -268,7 +285,7 @@ h1 {
             max-width: 250px;
             position: relative;
             grid-area: img;
-            
+
             img {
                 object-fit: cover;
                 width: 100%;
@@ -437,6 +454,21 @@ footer {
     }
 }
 
+/* Go top */
+.go-top {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background: #555;
+    opacity: .4;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 10%;
+}
+
 /* Media */
 @media (min-width: 768px) and (max-width: 991px) {
     .navigation {
@@ -494,11 +526,13 @@ footer {
                 padding: 0;
                 display: flex;
                 flex-direction: column;
+
                 p {
                     text-align: left;
                     padding-bottom: 0;
+
                     &:last-of-type {
-                       margin-top: 0;
+                        margin-top: 0;
                     }
                 }
 
@@ -561,38 +595,39 @@ footer {
         .wrapper {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr 1fr 1fr;
+
             .box-wrap {
                 // height: 150px;
                 margin: 15px auto;
-        
+
                 .box {
                     padding-top: 0;
                     margin: 0 auto;
                     // width: 100%;
-        
+
                     h3 {
-                       margin-top: 0;
+                        margin-top: 0;
                     }
-        
+
                     p {
                         padding: 0;
                     }
-        
+
                     button {
                         margin: 0;
                     }
                 }
-        
+
                 .img {
                     max-height: 204px;
                     min-width: 250px;
                 }
             }
-        
+
         }
     }
 
-    
+
     // services
     .services div.container {
 
@@ -675,12 +710,13 @@ footer {
                 display: flex;
                 flex-direction: column;
 
-                 p{
-                     padding-bottom: 0;
+                p {
+                    padding-bottom: 0;
+
                     &:last-of-type {
                         margin-top: 0;
                     }
-                 }       
+                }
 
                 button {
                     text-align: center;
