@@ -301,28 +301,26 @@ h1 {
 }
 
 .box {
-    padding-top: 50px;
-    margin: auto;
     transform: rotateY(180deg);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {margin-top: 0}
 
     p {
-        text-align: center;
-        padding: 0 140px;
+        padding: 0 10%;
 
         &:last-of-type {
             font-weight: bolder;
         }
     }
 
-    h3 {
-        text-align: center;
-        padding-left: 1vw;
-        margin-top: 120px;
-    }
-
     .btn-five {
         border: none;
-        margin: 36px 0;
+        margin: 35px 0 0 0;
         padding: 0 1vw;
         text-align: center;
         background-color: transparent;
@@ -505,26 +503,14 @@ footer {
         .box-wrap {
 
             .box {
-                padding: 0;
 
                 p {
-                    text-align: center;
-                    padding: 0 80px;
 
                     &:last-of-type {
                         margin-top: 0;
                     }
                 }
 
-                h3 {
-                  
-                    margin-top: 50px;
-                }
-
-                button {
-                    margin: 0;
-                    text-align: center;
-                }
             }
 
             .img {
@@ -574,26 +560,22 @@ footer {
 
     /* Our work */
     .work {
-        padding-top: 0;
 
         .wrapper {
 
             .box-wrap {
-                margin: 0 auto;
 
                 .box {
-                    padding-top: 0;
-                    margin: 0 auto;
 
                     h3 {
-                        margin-top: 15px;
-                    }
-
-                    p {
-                        padding: 0 40px;
+                        margin: 0;
                     }
 
                     button {
+                        margin: 0;
+                    }
+
+                    p {
                         margin: 0;
                     }
                 }
@@ -606,9 +588,10 @@ footer {
 
         }
     }
-.box p+p {
-        margin-bottom: 0;
-}
+
+    // .box p+p {
+    // margin-bottom: 0;
+    // }
 
     // services
     .services div.container {
@@ -680,29 +663,6 @@ footer {
     .work .wrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-
-        .box-wrap {
-            margin: 0 auto;
-            padding-bottom: 0;
-
-            .box {
-                padding: 0;
-
-                p {
-                    padding: 0 40px;
-                    margin: 0;
-
-                    &:last-of-type {
-                        margin-top: 0;
-                    }
-                }
-
-                button {
-                    margin-top: 5px;
-                    text-align: center;
-                }
-            }
-        }
     }
 
     /* Form */
